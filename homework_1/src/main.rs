@@ -2,16 +2,30 @@ const FAH_FREEZING: f64  = 32.0;
 
 
 fn main() {
+    //Variable definitions
     let temperature: f64 = 100.0;
     let arr = [33, 34, 35, 36, 37];
+    let mut arrTemp;
 
+    //Calling functions & storing results
     let celsiusTemp: f64 = fahrenheit_to_celsius(temperature);
     let FahrenheitTemp: f64 = celsius_to_fahrenheit(celsiusTemp);
 
-    println!("The temperature in celsius is: {celsiusTemp}");
-    println!("The temperature in fahrenheit is: {FahrenheitTemp}");
+    //Printing results
+    println!("The temperature in celsius is: {:.2}", celsiusTemp);
+    println!("The temperature in fahrenheit is: {:.2}", FahrenheitTemp);
 
     
+    //Loop for calling functions on temperatures in the array
+    println!("Array Temperatures");
+    for element in arr {
+        arrTemp = fahrenheit_to_celsius(element as f64);
+        println!("The temperature in celsius is: {:.2}", arrTemp);
+
+        arrTemp = celsius_to_fahrenheit(element as f64);
+        println!("The temperature in fahrenheit is: {:.2}", arrTemp);
+
+    }
 
     
 }
