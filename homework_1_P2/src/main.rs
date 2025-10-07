@@ -20,7 +20,6 @@ fn main() {
         }else if element % 5 == 0 {
             println!("Buzz");
         }
-
     }
 
     //Variable definition
