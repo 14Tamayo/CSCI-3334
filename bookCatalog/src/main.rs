@@ -28,13 +28,17 @@ fn load_books(filename: &str) -> Vec<Book>
 {
     // TODO: Implement this function
     // Hint: Use File::open() and BufReader
+    //For storing book catalogue
     let mut books = vec![];
 
+    //Open file & read line by line
     let file = File::open(filename).expect("Failed to open file.");
     let reader = BufReader::new(file);
 
+    //Iterate through the file
     for line in reader.lines()
     {
+        //Save each line from the file into a variable
         let line = line.expect("Failed to read line.");
 
         //Split line by commas
