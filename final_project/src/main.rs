@@ -105,7 +105,7 @@ impl ThreadPool {
 // Clean up resources when ThreadPool is dropped
 impl Drop for ThreadPool {
     fn drop(&mut self) {
-        // TODO: Send terminate message to all workers
+        // Send terminate message to all workers
 		println!("Sending terminate message to all workers...");
         thread::sleep(Duration::from_millis(1500));
 		
